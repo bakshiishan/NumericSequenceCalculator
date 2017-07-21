@@ -1,0 +1,66 @@
+﻿@model NumericSequenceCalculator.Models.SequenceCalculatorModel
+
+@{
+    ViewBag.Title = "Coding Task (Sequence Calculator)";
+}
+
+@using (Html.BeginForm())
+{
+    <h2>Coding Task (Numeric Sequence Calculator)</h2>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="form-horizontal col-lg-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.InputValue, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.InputValue, new { htmlAttributes = new { @class = "form-control", autofocus = "autofocus" } })
+                    @Html.ValidationMessageFor(model => model.InputValue, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-success" id="btnCalculate" />
+            </div>
+        </div>
+        <div class="form-horizontal col-lg-6">
+            The following numeric sequences shall be displayed:
+            <ul>
+                <li>All numbers up to and including the number entered,</li>
+                <li>All odd numbers up to and including the number entered,</li>
+                <li>All even numbers up to and including the number entered,</li>
+                <li>
+                    All numbers up to and including the number entered, except
+                    when,
+                    <ul>
+                        <li>A number is a multiple of 3 output C, and when,</li>
+                        <li>A number is a multiple of 5 output E, and when,</li>
+                        <li>A number is a multiple of both 3 and 5 output Z,</li>
+                    </ul>
+                </li>
+                <li>All fibonacci number up to and including the number entered.</li>
+            </ul>
+        </div>
+    </div>
+
+}
+<div id="divSequence" class="ScrollableDiv">
+    <h3>Sequence</h3>
+    @Html.DisplayFor(model => Model.Sequence)
+</div>
+<div id="divOddSequence" class="ScrollableDiv">
+    <h3>Odd Sequence</h3>
+    @Html.DisplayFor(model => Model.OddNumberSequence)
+</div>
+<div id="divEvenSequence" class="ScrollableDiv">
+    <h3>Even Sequence</h3>
+    @Html.DisplayFor(model => Model.EvenNumberSequence)
+</div>
+<div id="divCEZSequence" class="ScrollableDiv">
+    <h3>C E Z Sequence</h3>
+    @Html.DisplayFor(model => Model.CEZSequence)
+</div>
+<div id="divFibonnaciSequence" class="ScrollableDiv">
+    <h3>Fibonnaci Sequence</h3>
+    @Html.DisplayFor(model => Model.FibonacciSequence)
+</div>
+
