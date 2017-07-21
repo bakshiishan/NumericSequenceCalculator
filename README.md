@@ -17,7 +17,6 @@
                 <li>All fibonacci number up to and including the number entered.</li>
             </ul>
                         
-<h4>To run the website</h4>
 <p><b>To run this website please follow the steps:</b>
 <ul>
 <li>Download the files from GitHub Repository to your local system</li>
