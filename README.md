@@ -20,7 +20,7 @@
 <p><b>To run this website please follow the steps:</b>
 <ul>
 <li>Download the files from GitHub Repository to your local system</li>
-<li>Open the Solution(.sln) file in Visual Studio (2017)</li>
+<li>Open the Solution(NumericSequenceCalculator.sln) file in Visual Studio (2017)</li>
 <li>Click F5 to run the application</li>
 </ul>
 </p>
